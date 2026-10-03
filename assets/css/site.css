@@ -452,3 +452,18 @@ html { scroll-padding-top: calc(var(--head-h) + 12px); }
 .about { text-align: center; }
 .about .section-title { max-width: 24ch; margin-inline: auto; margin-bottom: 16px; text-wrap: balance; }
 .about-lead { font-size: 17px; line-height: 1.65; max-width: 60ch; margin: 0 auto; opacity: .9; }
+
+
+/* ── Página legal (política de privacidad) ────────────────────────────── */
+.legal { max-width: 760px; padding-top: 48px; padding-bottom: 72px; margin-inline: auto; }
+.legal h1 { font-size: clamp(30px, 4.5vw, 44px); margin-bottom: 8px; }
+.legal .legal-meta { font-size: 13px; opacity: .65; margin: 0 0 28px; }
+.legal h2 { font-size: 20px; margin: 30px 0 8px; }
+.legal p, .legal li { font-size: 15px; line-height: 1.65; }
+.legal ul { padding-left: 20px; margin: 8px 0 12px; }
+.legal li { margin-bottom: 6px; }
+.legal a { color: var(--color-accent); }
+
+/* Aviso de consentimiento junto a los formularios */
+.form-consent { font-size: 12px; line-height: 1.5; margin: 10px 0 0; opacity: .72; grid-column: 1 / -1; }
+.form-consent a { color: inherit; text-decoration: underline; }
