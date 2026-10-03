@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avimanager — Software de gestión avícola</title>
+<meta name="description" content="Registra alimento, mortalidad, peso y producción desde el celular. Al instante ves costo por ave, conversión y resultado de cada lote.">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<!-- Google tag (gtag.js) — GA4 de Avimanager -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YMJ07HMBLQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YMJ07HMBLQ');
+</script>
+
+<!-- Meta Pixel — pixel de Avimanager -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1386238589918832');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1386238589918832&ev=PageView&noscript=1"
+/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ── Header ────────────────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <img src="assets/img/logo.png" alt="" width="36" height="36">
+      Avimanager
+    </a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="#funciones">Funciones</a>
+      <a href="#demos">Demos</a>
+      <a href="#novedades">Novedades</a>
+      <a href="#precios">Precios</a>
+      <a href="#soporte">Soporte</a>
+    </nav>
+    <a href="https://avimanager.agromack.cl/" class="btn btn-primary header-cta" target="_blank" rel="noopener">
+      Entrar a la app
+    </a>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ── Hero ────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Software avícola</span>
+        <h1>Conoce cuánto te cuesta producir <em>cada lote de aves</em></h1>
+        <p class="lede">
+          Registras alimento, mortalidad, peso y producción desde el celular.
+          Al instante ves costo por ave, conversión y resultado de cada lote de postura, engorde o crianza.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://avimanager.agromack.cl/" target="_blank" rel="noopener">
+            Entrar a la app
+          </a>
+          <a class="btn btn-secondary" href="#funciones">Ver funciones</a>
+        </div>
+        <p class="hero-note" style="margin-top:16px;">
+          ✓ Web y celular &nbsp;·&nbsp; ✓ Prueba gratis 5 días &nbsp;·&nbsp; ✓ Cancela cuando quieras
+        </p>
+      </div>
+
+      <div>
+        <!-- Placeholder: reemplazar por captura real de la app -->
+        <div class="hero-screen blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i>
+          <i class="corner bl"></i><i class="corner br"></i>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+          <span>Captura de la app — próximamente</span>
+        </div>
+        <div class="hero-access">
+          <span>¿Ya tienes cuenta?</span>
+          <a href="https://avimanager.agromack.cl/" target="_blank" rel="noopener">Entra aquí →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Qué es Avimanager ───────────────────────────────────────────── -->
+  <section class="section" id="que-es">
+    <div class="wrap about">
+      <p class="section-label">Qué es Avimanager</p>
+      <h2 class="section-title">Una aplicación para llevar el control de tu plantel</h2>
+      <p class="about-lead">
+        Avimanager es una aplicación para productores avícolas pequeños y medianos de postura, engorde o crianza.
+        Registras el día de tus aves y tus compras, gastos y ventas, y ella calcula por lote el costo por ave,
+        la conversión y el resultado, sin cuaderno ni planillas.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Funciones ───────────────────────────────────────────────────── -->
+  <section class="section" id="funciones">
+    <div class="wrap">
+      <p class="section-label">Funciones</p>
+      <h2 class="section-title">Todo lo que necesitas para gestionar tu plantel</h2>
+      <p class="section-sub">Diseñado para productores reales, no para administradores. Cada función responde a una decisión que tomas en el galpón.</p>
+
+      <div class="features-grid">
+
+        <div class="feature-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+          </div>
+          <h3>KPIs productivos diarios</h3>
+          <p>Postura %, mortalidad, consumo de alimento y costo por ave. Por lote, por galpón o por período.</p>
+        </div>
+
+        <div class="feature-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <h3>Compras y stock de alimento</h3>
+          <p>Registra cada compra, lleva el inventario y relaciona el consumo con cada grupo de aves.</p>
+        </div>
+
+        <div class="feature-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Ventas de huevos y aves</h3>
+          <p>Registra ventas por lote: huevos, aves en pie, alimento o cualquier otro ingreso. El resultado se calcula solo.</p>
+        </div>
+
+        <div class="feature-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3>Pesaje y uniformidad</h3>
+          <p>Ingresa los pesos de tu muestra y obtén promedio, CV% y uniformidad. Histórico por lote.</p>
+        </div>
+
+        <div class="feature-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>
+          </div>
+          <h3>Selección de huevos</h3>
+          <p>Clasifica por tamaño en cada recolección. El sistema acumula y te muestra la distribución del lote.</p>
+        </div>
+
+        <div class="feature-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Multiusuario con roles</h3>
+          <p>Asigna acceso a operarios, encargados de galpón o administradores. Cada uno ve solo lo que necesita.</p>
+        </div>
+
+        <div class="feature-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Mantenedor de dietas</h3>
+          <p>Define las dietas y marcas de alimento por etapa productiva. El sistema las asocia al consumo de cada lote.</p>
+        </div>
+
+        <div class="feature-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>Web y celular</h3>
+          <p>Funciona en cualquier dispositivo sin instalar nada. Registra desde el galpón y analiza desde el escritorio.</p>
+        </div>
+
+        <div class="feature-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Gastos generales</h3>
+          <p>Registra cualquier gasto del plantel y asócialo al lote correspondiente para tener el costo real de producción.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Demos / videos ──────────────────────────────────────────────── -->
+  <section class="section" id="demos">
+    <div class="wrap">
+      <p class="section-label">Demos</p>
+      <h2 class="section-title">Mira cómo funciona</h2>
+      <p class="section-sub">Videos cortos de las funciones principales. Cada uno muestra un flujo real, sin edición.</p>
+
+      <div class="demos-grid">
+
+        <div class="demo-card">
+          <div class="demo-placeholder blueprint">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
+            </svg>
+            <span>Video — Registro diario</span>
+          </div>
+          <h4>Registro diario del lote</h4>
+          <p>Cómo ingresar postura, mortalidad y consumo en menos de un minuto desde el celular.</p>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-placeholder blueprint">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
+            </svg>
+            <span>Video — KPIs del período</span>
+          </div>
+          <h4>KPIs por período</h4>
+          <p>Cómo revisar conversión, costo por ave y resultado del lote en los gráficos productivos.</p>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-placeholder blueprint">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
+            </svg>
+            <span>Video — Stock de alimento</span>
+          </div>
+          <h4>Compra y stock de alimento</h4>
+          <p>Cómo registrar una compra y ver cómo se descuenta del stock con cada registro diario.</p>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-placeholder blueprint">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
+            </svg>
+            <span>Video — Pesaje y uniformidad</span>
+          </div>
+          <h4>Pesaje y uniformidad del lote</h4>
+          <p>Cómo ingresar una muestra de pesos y obtener el peso promedio, CV% y uniformidad del lote.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Novedades / actualizaciones ─────────────────────────────────── -->
+  <section class="section" id="novedades">
+    <div class="wrap">
+      <p class="section-label">Novedades</p>
+      <h2 class="section-title">Actualizaciones recientes</h2>
+      <p class="section-sub">Avimanager se actualiza de forma continua. Acá se publican los cambios a medida que salen.</p>
+
+      <div class="updates-list blueprint">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+
+        <div class="update-item update-empty">
+          <span class="update-date">Próximamente</span>
+          <div class="update-content">
+            <h4>Aquí publicaremos las novedades</h4>
+            <p>Cada mejora y función nueva de Avimanager se anunciará en esta sección apenas salga.</p>
+          </div>
+        </div>
+
+        <!-- Plantilla para cada novedad real (copiar, pegar arriba y editar):
+        <div class="update-item">
+          <span class="update-date">Mes Año</span>
+          <div class="update-content">
+            <h4>Título del cambio</h4>
+            <p>Qué cambió y para qué le sirve al productor.</p>
+          </div>
+        </div>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Precios ──────────────────────────────────────────────────────── -->
+  <section class="section" id="precios">
+    <div class="wrap">
+      <p class="section-label">Precios</p>
+      <h2 class="section-title">Elige tu plan</h2>
+      <p class="section-sub">Selecciona tu país para ver los precios en tu moneda. Todos los planes parten con <strong>5 días de prueba gratis</strong>.</p>
+
+      <div class="country-selector" role="group" aria-label="País">
+        <button class="country-btn active" data-country="cl" type="button">🇨🇱 Chile</button>
+        <button class="country-btn" data-country="mx" type="button">🇲🇽 México</button>
+        <button class="country-btn" data-country="pe" type="button">🇵🇪 Perú</button>
+        <button class="country-btn" data-country="other" type="button">🌎 Otro país</button>
+      </div>
+
+      <div class="plans-grid">
+
+        <div class="plan-card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="plan-header">
+            <span class="plan-name">Mensual</span>
+            <div class="plan-price">
+              <span class="price-amount" id="price-monthly">$9.200</span>
+              <span class="price-currency" id="currency-monthly">CLP</span>
+            </div>
+            <span class="price-period">por mes</span>
+            <span class="plan-trial">5 días de prueba gratis</span>
+          </div>
+          <ul class="plan-features">
+            <li>Todas las funciones de Avimanager</li>
+            <li>Web y celular</li>
+            <li>Cancela cuando quieras</li>
+          </ul>
+          <a id="btn-monthly" href="#" class="btn btn-secondary btn-block plan-btn" target="_blank" rel="noopener" data-plan="monthly">
+            Probar 5 días gratis
+          </a>
+        </div>
+
+        <div class="plan-card plan-featured blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <span class="plan-badge" id="badge-annual">Ahorra 51%</span>
+          <div class="plan-header">
+            <span class="plan-name">Anual</span>
+            <div class="plan-price">
+              <span class="price-amount" id="price-annual">$54.500</span>
+              <span class="price-currency" id="currency-annual">CLP</span>
+            </div>
+            <span class="price-period">por año · <span id="price-monthly-equiv">equiv. $4.542/mes</span></span>
+            <span class="plan-trial">5 días de prueba gratis</span>
+          </div>
+          <ul class="plan-features">
+            <li>Todo lo del plan mensual</li>
+            <li>Un solo pago por 12 meses</li>
+            <li>Cancela cuando quieras</li>
+          </ul>
+          <a id="btn-annual" href="#" class="btn btn-primary btn-block plan-btn" target="_blank" rel="noopener" data-plan="annual">
+            Probar 5 días gratis
+          </a>
+        </div>
+
+      </div>
+
+      <p class="plans-note">
+        El pago se procesa a través de <strong>Hotmart</strong>. ¿Prefieres probarlo con los datos de tu plantel antes de elegir plan?
+        <a href="https://wa.me/56998791270?text=Quisiera%20una%20prueba%20personalizada%20de%20Avimanager" target="_blank" rel="noopener" data-wa="trial">Pide una prueba personalizada por WhatsApp</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Prueba personalizada ─────────────────────────────────────────── -->
+  <section class="cta-band" id="prueba">
+    <div class="wrap">
+      <div>
+        <h2>¿Quieres probarlo con los datos de tu plantel?</h2>
+        <p>Armamos una prueba personalizada para tu caso: nos cuentas qué produces y cuántas aves tienes, y dejamos tu cuenta lista para que pruebes Avimanager con tu operación real. Escríbenos y coordinamos.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/56998791270?text=Quisiera%20una%20prueba%20personalizada%20de%20Avimanager" class="btn btn-light" target="_blank" rel="noopener" data-wa="trial">
+          Pedir mi prueba personalizada
+        </a>
+        <a href="#soporte" class="cta-alt">o escríbenos por el formulario</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Soporte ───────────────────────────────────────────────────────── -->
+  <section class="section" id="soporte" style="border-bottom:none;">
+    <div class="wrap">
+      <p class="section-label">Soporte</p>
+      <div class="support-grid">
+
+        <div class="support-info">
+          <h2>¿Tienes una pregunta o problema?</h2>
+          <p>Escríbenos por este formulario y te respondemos dentro de las próximas 24 horas hábiles. También puedes contactarnos directamente.</p>
+          <div class="support-links">
+            <a href="mailto:contacto@agromack.cl" class="support-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              contacto@agromack.cl
+            </a>
+            <a href="https://wa.me/56998791270?text=Quisiera%20saber%20m%C3%A1s%20de%20Avimanager" class="support-link" target="_blank" rel="noopener" data-wa="main">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              WhatsApp +56 9 9879 1270
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulario de soporte — MailerLite (embed). Campos: name, email, mensajes. -->
+        <div>
+          <div id="mlb2-46682763" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-46682763">
+            <div class="ml-form-embedWrapper embedForm">
+
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <form class="ml-block-form support-form" action="https://assets.mailerlite.com/jsonp/2057335/forms/200328651992990999/subscribe" data-code="" method="post" target="_blank">
+
+                  <div class="form-row">
+                    <div class="form-group ml-form-fieldRow">
+                      <div class="ml-field-group ml-field-name ml-validate-required">
+                        <label for="s-name">Nombre</label>
+                        <input class="form-control input" id="s-name" aria-label="name" aria-required="true" type="text" data-inputmask="" name="fields[name]" placeholder="Tu nombre" autocomplete="given-name" required>
+                      </div>
+                    </div>
+                    <div class="form-group ml-form-fieldRow">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <label for="s-email">Correo</label>
+                        <input class="form-control input" id="s-email" aria-label="email" aria-required="true" type="email" data-inputmask="" name="fields[email]" placeholder="tu@correo.com" autocomplete="email" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-mensajes ml-validate-required">
+                      <label for="s-message">Mensaje</label>
+                      <textarea class="form-control input" id="s-message" name="fields[mensajes]" aria-label="mensajes" aria-required="true" maxlength="1024" rows="5" placeholder="Cuéntanos tu consulta o el problema que encontraste" required></textarea>
+                      <span class="form-hint">Máximo 1.024 caracteres.</span>
+                    </div>
+                  </div>
+
+                  <input type="hidden" name="ml-submit" value="1">
+
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary btn btn-primary btn-block">Enviar mensaje</button>
+                    <button disabled="disabled" style="display: none;" type="button" class="loading btn btn-primary btn-block">Enviando…</button>
+                  </div>
+
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+
+              <div class="ml-form-successBody row-success form-success" style="display: none">
+                <div class="ml-form-successContent">
+                  Mensaje enviado. Te respondemos dentro de las próximas 24 horas hábiles.
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ──────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer-top">
+      <div class="site-footer-brand">
+        Avimanager — Software de gestión avícola
+        <span>Un producto de <a href="https://agromack.cl" target="_blank" rel="noopener">Agromack</a> — MacKinnon Servicios Agropecuarios SpA</span>
+      </div>
+      <div class="site-footer-contact">
+        <a href="mailto:contacto@agromack.cl">contacto@agromack.cl</a>
+      </div>
+    </div>
+    <hr class="site-footer-divider">
+    <p class="site-footer-bottom">
+      Avimanager es un producto de <a href="https://agromack.cl" target="_blank" rel="noopener">Agromack — MacKinnon Servicios Agropecuarios SpA</a>,
+      consultora veterinaria y agropecuaria · Santiago, Chile.
+      Desarrollado por Andrew MacKinnon, Médico Veterinario, especialista en producción avícola comercial.
+      © 2026 MacKinnon Servicios Agropecuarios SpA. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<!-- ── WhatsApp flotante ───────────────────────────────────────────────── -->
+<div class="wa-float" id="waFloat">
+  <div class="wa-bubble" id="waBubble" hidden>
+    <a href="https://wa.me/56998791270?text=Quisiera%20saber%20m%C3%A1s%20de%20Avimanager" target="_blank" rel="noopener" data-wa="main">¿Quieres saber más?</a>
+    <button type="button" class="wa-close" id="waClose" aria-label="Cerrar mensaje">×</button>
+  </div>
+  <a class="wa-btn" href="https://wa.me/56998791270?text=Quisiera%20saber%20m%C3%A1s%20de%20Avimanager" target="_blank" rel="noopener" data-wa="main" aria-label="Escribir por WhatsApp a Avimanager">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script>
+function ml_webform_success_46682763() {
+  var ok = document.querySelector('.ml-subscribe-form-46682763 .row-success');
+  var form = document.querySelector('.ml-subscribe-form-46682763 .row-form');
+  if (form) form.style.display = 'none';
+  if (ok) ok.style.display = 'block';
+}
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+<script>
+fetch("https://assets.mailerlite.com/jsonp/2057335/forms/200328651992990999/takel").catch(function () {});
+</script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
