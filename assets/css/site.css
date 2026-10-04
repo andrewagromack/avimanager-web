@@ -478,3 +478,31 @@ html { scroll-padding-top: calc(var(--head-h) + 12px); }
 .demo-frame { aspect-ratio: 16/9; background: #000; position: relative; }
 .demo-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .demo-card p a { color: var(--color-accent); font-weight: 500; }
+
+/* ── Hero: captura real de la app ─────────────────────────────────────── */
+.hero-shot{margin-inline:auto;max-width:340px;background:var(--color-surface);border:1px solid var(--color-divider);box-shadow:var(--shadow-md);line-height:0}
+.hero-shot img{display:block;width:100%;height:auto}
+.hero-grid .hero-access{justify-content:center}
+@media (max-width:860px){.hero-shot{max-width:300px}}
+
+/* ── Galería de capturas ──────────────────────────────────────────────── */
+.shots{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.shot{display:flex;flex-direction:column;gap:8px;min-width:0}
+.shot a{display:block;border:1px solid var(--color-divider);background:#fff;box-shadow:var(--shadow-md)}
+.shot img{display:block;width:100%;aspect-ratio:560/1108;object-fit:contain;object-position:top;background:#fff}
+.shot h3{font-size:15px;margin:6px 0 0}
+.shot p{font-size:13px;line-height:1.45;opacity:.75;margin:0}
+@media (max-width:900px){
+  .shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:14px;-webkit-overflow-scrolling:touch}
+  .shot{flex:0 0 68%;max-width:260px;scroll-snap-align:start}
+}
+
+/* ── Captura ampliada ─────────────────────────────────────────────────── */
+.lb{position:fixed;inset:0;margin:0;padding:0;border:0;width:100%;height:100%;max-width:none;max-height:none;background:transparent;color:#fff}
+.lb::backdrop{background:rgba(16,26,56,.78)}
+.lb-box{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:100%;padding:56px 16px 20px;box-sizing:border-box}
+.lb-box img{display:block;width:auto;height:auto;max-width:min(88vw,380px);max-height:calc(100vh - 140px);max-height:calc(100dvh - 140px);background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+.lb-cap{margin:0;font-size:14px;font-weight:500}
+.lb-close{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:var(--color-accent);font-size:28px;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.lb-close:focus-visible{outline:3px solid var(--color-accent-2);outline-offset:2px}
+body.lb-open{overflow:hidden}

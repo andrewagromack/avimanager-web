@@ -42,8 +42,46 @@ src="https://www.facebook.com/tr?id=1386238589918832&ev=PageView&noscript=1"
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/base.css?v=20261004d">
+<link rel="stylesheet" href="assets/css/site.css?v=20261004d">
+<style id="demos-css">
+/* Reglas de la sección Demos incrustadas aquí para que se vean bien aunque site.css esté en caché */
+.demo-tag{align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-2-800);background:var(--color-accent-2-100);padding:3px 10px}
+.demo-frame{position:relative;display:block;width:100%;aspect-ratio:16/9;background:#000}
+.demo-frame iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
+.demo-card p a{color:var(--color-accent);font-weight:500}
+.hero-shot{margin-inline:auto;max-width:340px;background:var(--color-surface);border:1px solid var(--color-divider);box-shadow:var(--shadow-md);line-height:0}
+.hero-shot img{display:block;width:100%;height:auto}
+.hero-grid .hero-access{justify-content:center}
+@media (max-width:860px){.hero-shot{max-width:300px}}
+.shots{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.shot{display:flex;flex-direction:column;gap:8px;min-width:0}
+.shot a{display:block;border:1px solid var(--color-divider);background:#fff;box-shadow:var(--shadow-md)}
+.shot img{display:block;width:100%;aspect-ratio:560/1108;object-fit:contain;object-position:top;background:#fff}
+.shot h3{font-size:15px;margin:6px 0 0}
+.shot p{font-size:13px;line-height:1.45;opacity:.75;margin:0}
+@media (max-width:900px){
+  .shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:14px;-webkit-overflow-scrolling:touch}
+  .shot{flex:0 0 68%;max-width:260px;scroll-snap-align:start}
+}
+.lb{position:fixed;inset:0;margin:0;padding:0;border:0;width:100%;height:100%;max-width:none;max-height:none;background:transparent;color:#fff}
+.lb::backdrop{background:rgba(16,26,56,.78)}
+.lb-box{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:100%;padding:56px 16px 20px;box-sizing:border-box}
+.lb-box img{display:block;width:auto;height:auto;max-width:min(88vw,380px);max-height:calc(100vh - 140px);max-height:calc(100dvh - 140px);background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+.lb-cap{margin:0;font-size:14px;font-weight:500}
+.lb-close{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:var(--color-accent);font-size:28px;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.lb-close:focus-visible{outline:3px solid var(--color-accent-2);outline-offset:2px}
+body.lb-open{overflow:hidden}
+</style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ysi7g1lk09");
+</script>
+<!-- End Microsoft Clarity -->
 </head>
 <body>
 
@@ -93,14 +131,14 @@ src="https://www.facebook.com/tr?id=1386238589918832&ev=PageView&noscript=1"
       </div>
 
       <div>
-        <!-- Placeholder: reemplazar por captura real de la app -->
-        <div class="hero-screen blueprint">
-          <i class="corner tl"></i><i class="corner tr"></i>
-          <i class="corner bl"></i><i class="corner br"></i>
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-          </svg>
-          <span>Captura de la app — próximamente</span>
+        <div class="hero-shot blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <picture>
+            <source srcset="assets/img/app-graficos.webp" type="image/webp">
+            <img src="assets/img/app-graficos.png" width="786" height="1060"
+                 alt="Pantalla de gráficos productivos de Avimanager con la postura diaria de un lote"
+                 fetchpriority="high" decoding="async">
+          </picture>
         </div>
         <div class="hero-access">
           <span>¿Ya tienes cuenta?</span>
@@ -217,26 +255,87 @@ src="https://www.facebook.com/tr?id=1386238589918832&ev=PageView&noscript=1"
     </div>
   </section>
 
+  <!-- ── Capturas ──────────────────────────────────────────────────────── -->
+  <section class="section" id="capturas">
+    <div class="wrap">
+      <p class="section-label">Capturas</p>
+      <h2 class="section-title">La aplicación por dentro</h2>
+      <p class="section-sub">Pantallas reales de Avimanager en el celular. Abre una para verla en grande.</p>
+      <ul class="shots" tabindex="0" aria-label="Capturas de la aplicación">
+        <li class="shot">
+          <a href="assets/img/capturas/indicadores-full.png" data-title="Indicadores por lote" aria-label="Ampliar la captura: Indicadores por lote">
+            <picture>
+              <source srcset="assets/img/capturas/indicadores-560.webp" type="image/webp">
+              <img src="assets/img/capturas/indicadores-full.png" width="560" height="1108" loading="lazy" decoding="async" alt="Pantalla de indicadores por lote: edad, stock de aves, mortalidad y consumo">
+            </picture>
+          </a>
+          <h3>Indicadores por lote</h3>
+          <p>Edad, stock de aves, mortalidad y consumo del lote.</p>
+        </li>
+        <li class="shot">
+          <a href="assets/img/capturas/graficos-full.png" data-title="Comparación de lotes" aria-label="Ampliar la captura: Comparación de lotes">
+            <picture>
+              <source srcset="assets/img/capturas/graficos-560.webp" type="image/webp">
+              <img src="assets/img/capturas/graficos-full.png" width="560" height="1108" loading="lazy" decoding="async" alt="Gráfico que compara la mortalidad acumulada de dos lotes por semana de edad">
+            </picture>
+          </a>
+          <h3>Comparación de lotes</h3>
+          <p>Mortalidad acumulada de dos galpones, semana a semana.</p>
+        </li>
+        <li class="shot">
+          <a href="assets/img/capturas/pesaje-full.png" data-title="Pesaje" aria-label="Ampliar la captura: Pesaje">
+            <picture>
+              <source srcset="assets/img/capturas/pesaje-560.webp" type="image/webp">
+              <img src="assets/img/capturas/pesaje-full.png" width="560" height="1108" loading="lazy" decoding="async" alt="Pantalla de pesaje con el peso promedio y la uniformidad de cada lote">
+            </picture>
+          </a>
+          <h3>Pesaje</h3>
+          <p>Peso promedio y uniformidad de cada lote.</p>
+        </li>
+        <li class="shot">
+          <a href="assets/img/capturas/clasificacion-full.png" data-title="Clasificación de huevos" aria-label="Ampliar la captura: Clasificación de huevos">
+            <picture>
+              <source srcset="assets/img/capturas/clasificacion-560.webp" type="image/webp">
+              <img src="assets/img/capturas/clasificacion-full.png" width="560" height="1108" loading="lazy" decoding="async" alt="Pantalla de clasificación de huevos con la distribución por calibre">
+            </picture>
+          </a>
+          <h3>Clasificación de huevos</h3>
+          <p>Distribución por calibre, de XS a super extra.</p>
+        </li>
+        <li class="shot">
+          <a href="assets/img/capturas/alimento-full.png" data-title="Alimento" aria-label="Ampliar la captura: Alimento">
+            <picture>
+              <source srcset="assets/img/capturas/alimento-560.webp" type="image/webp">
+              <img src="assets/img/capturas/alimento-full.png" width="560" height="1108" loading="lazy" decoding="async" alt="Pantalla de alimento con el stock por bodega">
+            </picture>
+          </a>
+          <h3>Alimento</h3>
+          <p>Stock por bodega, compras y catálogo.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- ── Demos / videos ──────────────────────────────────────────────── -->
   <section class="section" id="demos">
     <div class="wrap">
       <p class="section-label">Demos</p>
       <h2 class="section-title">Mira cómo funciona</h2>
-      <p class="section-sub">Un video corto para conocer Avimanager y los tutoriales para quienes ya tienen cuenta.</p>
+      <p class="section-sub">Una demo corta de la aplicación y los tutoriales para quienes ya tienen cuenta.</p>
 
       <div class="demos-grid">
 
         <div class="demo-card">
-          <span class="demo-tag">Para conocerlo · 3 min</span>
+          <span class="demo-tag">Demo · 3 min</span>
           <div class="demo-frame blueprint">
             <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
             <iframe src="https://www.youtube-nocookie.com/embed/8DJenTvkYcQ?rel=0"
-                    title="Conoce Avimanager en 3 minutos" loading="lazy" allowfullscreen
+                    title="Demo de Avimanager: formularios básicos" loading="lazy" allowfullscreen
                     referrerpolicy="strict-origin-when-cross-origin"
                     allow="accelerometer; encrypted-media; picture-in-picture"></iframe>
           </div>
-          <h4>Conoce Avimanager en 3 minutos</h4>
-          <p>Una visión general de la aplicación.</p>
+          <h4>Formularios básicos</h4>
+          <p>Una demostración de la aplicación en uso.</p>
         </div>
 
         <div class="demo-card">
@@ -473,6 +572,52 @@ src="https://www.facebook.com/tr?id=1386238589918832&ev=PageView&noscript=1"
     </p>
   </div>
 </footer>
+
+<!-- ── Captura ampliada ──────────────────────────────────────────────────── -->
+<dialog id="lightbox" class="lb" aria-label="Captura ampliada">
+  <div class="lb-box">
+    <button type="button" class="lb-close" aria-label="Cerrar">&times;</button>
+    <img src="" alt="">
+    <p class="lb-cap"></p>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || typeof dlg.showModal !== 'function') return;   // sin soporte: el enlace abre la imagen en la misma pestaña
+  var img = dlg.querySelector('img'), cap = dlg.querySelector('.lb-cap'), pushed = false, trigger = null;
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('.shot a');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    trigger = a;
+    img.src = a.getAttribute('href');
+    img.alt = (a.querySelector('img') || {}).alt || '';
+    cap.textContent = a.getAttribute('data-title') || '';
+    dlg.showModal();
+    document.body.classList.add('lb-open');
+    // Una entrada de historial: así el botón "atrás" del celular cierra la ventana en vez de salir de la página
+    try { history.pushState({ lb: 1 }, '', location.href); pushed = true; } catch (err) {}
+  });
+
+  // X, tocar el fondo o el texto: todo cierra, salvo tocar la imagen
+  dlg.addEventListener('click', function (e) {
+    if (!e.target.closest('.lb-box img')) dlg.close();
+  });
+
+  dlg.addEventListener('close', function () {      // se dispara con X, Esc, fondo o "atrás"
+    document.body.classList.remove('lb-open');
+    if (pushed) { pushed = false; history.back(); }  // retira la entrada de historial que agregamos
+    if (trigger) trigger.focus();
+  });
+
+  window.addEventListener('popstate', function () {  // botón "atrás" del celular o del navegador
+    if (dlg.open) { pushed = false; dlg.close(); }
+  });
+})();
+</script>
 
 <!-- ── WhatsApp flotante ───────────────────────────────────────────────── -->
 <div class="wa-float" id="waFloat">
