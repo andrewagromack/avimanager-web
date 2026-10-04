@@ -10,7 +10,7 @@ function track(fbEvent, fbParams, gaEvent, gaParams) {
 // ── Selector de país / precios ───────────────────────────────────────────
 (function () {
   const HOTMART = 'https://pay.hotmart.com/M104285732W?off=';
-  const WA_PLAN = 'https://wa.me/56998791270?text=' +
+  const WA_PLAN = 'https://wa.me/56936796647?text=' +
     encodeURIComponent('Quisiera el plan mensual en USD de Avimanager');
 
   // Los precios son números: el equivalente mensual y el % de ahorro se calculan
