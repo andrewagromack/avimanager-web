@@ -37,7 +37,7 @@ function track(fbEvent, fbParams, gaEvent, gaParams) {
   };
   if (!btns.length || !els.amountM) return;
 
-  const LABEL_TRIAL = 'Probar 5 días gratis';
+  const LABEL_PLAN = 'Suscribirme al plan';
   let current = 'cl';
 
   function money(n, plan, decimals) {
@@ -49,8 +49,8 @@ function track(fbEvent, fbParams, gaEvent, gaParams) {
 
   function setButton(btn, href, kind, planName) {
     if (href) {
-      btn.href = href; btn.textContent = LABEL_TRIAL;
-      btn.setAttribute('aria-label', LABEL_TRIAL + ', plan ' + planName);
+      btn.href = href; btn.textContent = LABEL_PLAN;
+      btn.setAttribute('aria-label', LABEL_PLAN + ' ' + planName);
       btn.dataset.kind = 'checkout';
     } else {
       btn.href = WA_PLAN; btn.textContent = 'Consultar plan ' + planName;
