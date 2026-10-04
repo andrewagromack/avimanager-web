@@ -467,3 +467,14 @@ html { scroll-padding-top: calc(var(--head-h) + 12px); }
 /* Aviso de consentimiento junto a los formularios */
 .form-consent { font-size: 12px; line-height: 1.5; margin: 10px 0 0; opacity: .72; grid-column: 1 / -1; }
 .form-consent a { color: inherit; text-decoration: underline; }
+
+
+/* ── Demos: video corto + tutoriales ──────────────────────────────────── */
+.demo-tag {
+  align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--color-accent-2-800);
+  background: var(--color-accent-2-100); padding: 3px 10px;
+}
+.demo-frame { aspect-ratio: 16/9; background: #000; position: relative; }
+.demo-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.demo-card p a { color: var(--color-accent); font-weight: 500; }
