@@ -73,6 +73,15 @@ src="https://www.facebook.com/tr?id=1386238589918832&ev=PageView&noscript=1"
 .shots{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;list-style:none;margin:0;padding:0}
 .shot{display:flex;flex-direction:column;gap:8px;min-width:0}
 .shot a{display:block;border:1px solid var(--color-divider);background:#fff;box-shadow:var(--shadow-md)}
+.shot a{position:relative;overflow:hidden;cursor:zoom-in;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.shot a::after{content:"+";position:absolute;right:8px;bottom:8px;width:32px;height:32px;display:grid;place-items:center;background:var(--color-accent);color:#fff;font-size:22px;line-height:1;opacity:0;transform:translateY(6px);transition:opacity .2s ease,transform .2s ease}
+.shot a:hover,.shot a:focus-visible{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--color-accent)}
+.shot a:hover::after,.shot a:focus-visible::after{opacity:1;transform:none}
+.shot a:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.shot a:active{transform:translateY(-1px)}
+.shot img{transition:transform .35s ease}
+.shot a:hover img{transform:scale(1.03)}
+@media (prefers-reduced-motion:reduce){.shot a,.shot a::after,.shot img{transition:none}.shot a:hover{transform:none}.shot a:hover img{transform:none}}
 .shot img{display:block;width:100%;aspect-ratio:560/1108;object-fit:contain;object-position:top;background:#fff}
 .shot h3{font-size:15px;margin:6px 0 0}
 .shot p{font-size:13px;line-height:1.45;opacity:.75;margin:0}
