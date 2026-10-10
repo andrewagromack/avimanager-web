@@ -19,9 +19,9 @@ function track(fbEvent, fbParams, gaEvent, gaParams) {
   const PLANS = {
     cl:    { locale: 'es-CL', prefix: '$',  code: 'CLP', monthly: 9200,  annual: 54500,
              forceDec: false, link: { monthly: HOTMART + 'k5ai9vjz', annual: HOTMART + 'r7hzobfi' } },
-    mx:    { locale: 'es-MX', prefix: '$',  code: 'MXN', monthly: 185.6, annual: 1006.8,
+    mx:    { locale: 'es-MX', prefix: '$',  code: 'MXN', monthly: 185.6, annual: 1600.8,
              forceDec: true,  link: { monthly: HOTMART + 'x5qv6il6', annual: HOTMART + 'j3synwpc' } },
-    pe:    { locale: 'es-PE', prefix: 'S/', code: 'PEN', monthly: 31,    annual: 192.8,
+    pe:    { locale: 'es-PE', prefix: 'S/', code: 'PEN', monthly: 31,    annual: 262,
              forceDec: false, link: { monthly: HOTMART + 'e8zucz15', annual: HOTMART + 'vhyluyrq' } },
     other: { locale: 'es-CL', prefix: '$',  code: 'USD', monthly: 8.99,  annual: 55,
              forceDec: false, link: { monthly: HOTMART + 'g03cegig&checkoutMode=6', annual: HOTMART + 'nf4hmr9h' } },
